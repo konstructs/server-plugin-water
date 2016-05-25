@@ -88,9 +88,8 @@ public class WaterActor extends KonstructsActor {
             replaceVacuumBlock(pos_below, Block.create(newBlock), simulationFactor(400));
             replaceWithVacuum(BlockFilterFactory.withState(BlockType.STATE_LIQUID), pos_center, simulationFactor(400));
 
-        // Merge with existing water under
-        } else if (below.equals(BlockTypeId.fromString("org/konstructs/water"))
-                || below.getNamespace().equals("org/konstructs/water")) {
+        // Merge with existing non-full water under
+        } else if (below.getNamespace().equals("org/konstructs/water")) {
 
             if (!heatMap.containsKey(pos_below) || (heatMap.containsKey(pos_below) && heatMap.get(pos_below) < 20)) {
                 waterQueue.put(pos_below, mergeWaterBlocks(center, below));
