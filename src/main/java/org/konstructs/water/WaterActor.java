@@ -50,6 +50,8 @@ public class WaterActor extends KonstructsActor {
                 replaceBlock(
                         BlockFilterFactory.VACUUM.or(BlockFilterFactory.withState(BlockType.STATE_LIQUID)),
                         p, Block.create(waterQueue.get(p)), simulationFactor(400));
+
+                waterQueue.remove(p);
             }
 
             scheduleSelfOnce(new TriggerWaterQueue(), simulationFactor(100));
