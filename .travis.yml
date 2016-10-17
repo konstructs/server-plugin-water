@@ -1,0 +1,17 @@
+---
+
+language: java
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk7
+
+deploy:
+  provider: releases
+  api_key:
+    secure: AvJYlmPuTGjt/0lX6SsS+HeblhuCiZ+3fKpZJtDyw/aVI7MJbXC6zdjWrLTJZRNL5nNdi4JE26DVd7jn3EEfwNLFWWRY9M2SgvKjzoMm+DpUV5Bimq+V4PIMz5fzPDfN8NhBGGNdcIfC2mZq1Da1fgKL1BRQT1RFW4AqEMjJ2q+rMZtheCNf1u3P9t4dfTEybJB+bIxl+pV43cYk4n14sAanvz7uDiDzV+/RVY6Luc+OJkXfa/x+EgAA/7nvXFiOe0tzpYTXxv2OJKqsgR7shoyiN5wLr6QiPqnMYkX66hxCdpbcoPajXnTdUR6c5+pVQopGmA0VuFSqm4nepyCbpLYRnQ6+VrDdadFvxF4nSijvTVAlHm8nKUwe1PHtcLFyzvV8wtsTZOYWoPsE8hRjE415GpTEEoaN71zPsosnlM41pI+zpE/BhEa2xz3LwUI9CC/SEemEv8Ig28DmX+C55qJFEmmJ+FpFITP7UJmnuSvWeSItMaMzivw5EJK82noUGl6B39AkFWHDEjX0MN2Z6aJhrlIoB+VbFfgTCryLzajTO3NNEAEP4SGixvRT4VF10C3EvdPgxfxSXdFBXqkW4b24kaNWPOtuu756MomldpvYfSmGrG8Cpy5/ycCsNnQoftR+mJdqIM9U/IaGpKYsyM/JMF0JfppEVs1zmlMx4qU=
+  file: build/libs/server-plugin-water.jar
+  on:
+    repo: konstructs/server-plugin-water
+    tags: true
+    jdk: openjdk7
